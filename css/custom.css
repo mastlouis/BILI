@@ -7,6 +7,15 @@
     color: white;
 }
 
+#faq {
+    text-align: left;
+}
+
+/* Overrides faq style */
+#faq-title {
+    text-align: center;
+}
+
 #about-our-spring-retreat {
     text-align: justify !important;
 }

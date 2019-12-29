@@ -19,6 +19,7 @@ Although you can use them, for a more unique website, replace these images with 
 
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,20 +101,20 @@ Although you can use them, for a more unique website, replace these images with 
     </header>
 
 	<!-- Intro Section -->
-    <section id="about-our-spring-retreat" class="intro">
+    <section id="about-our-spring-retreat" class="content content-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                 	<!-- <span class="glyphicon glyphicon-apple" style="font-size: 60px"></span> -->
                     <h2 class="section-heading">About our Spring Retreat</h2>
-                    <p class="lead text">
+                    <p class="lead text-light">
                         To what extent do you feel like your religious/philosophical identities/worldview are 
                         <strong>visible</strong> in your day-to-day life? How often do you think about it, and in what 
                         circumstances? How do <strong>your identities</strong>, or your relationship to your identities, 
                         <strong>impact</strong> the way that you <strong>approach others</strong> and <strong>understand yourself</strong>? We will explore 
                         these questions and more at our annual retreat!
                     </p>
-                    <p class="lead text">
+                    <p class="lead text-light">
                         <strong>Where & When</strong>: The retreat is the <strong>weekend of February 22nd and February 23rd, 2020</strong> at the <strong>MIT Endicott House</strong> in Deadham, Massachusetts.
                         
                         How to get there: We will coordinate carpooling. Attendees are encouraged to use ride shares.
@@ -191,26 +192,106 @@ Although you can use them, for a more unique website, replace these images with 
     <!-- /.container-fluid -->
 
 	<!-- Content 3 -->
-     <section id="faq" class="content content-3">
+    <section id="faq" class="content content-3">
         <div class="container">
-            <h2 class="section-header">
+            <h2 id = "faq-title" class="section-header">
                 <!-- <span class="glyphicon glyphicon-pushpin text-primary"></span><br> -->
                 Frequently Asked Questions
             </h2>
-            <p class="lead text-dark">Is this Event really free?</p>
-            <p class="text-dark">Yes, this retreat includes free accommodations, meals, and linens.</p>
-            <p class="text-dark">The only thing not covered by BILI will be transportation to and from the retreat.</p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="lead text-dark">Is this Event really free?</p>
+                    <p class="text-dark">Yes, this retreat includes free accommodations, meals, and linens.</p>
+                    <p class="text-dark">The only thing not covered by BILI will be transportation to and from the retreat.</p>
                     <!-- <a href="#" class="btn btn-primary btn-lg">Check Now</a>                -->
+                </div>
+                <div class="col-sm-6">
+                    <p class="lead text-dark">What are the housing arrangements?</p>
+                    <p class="text-dark">Everyone will be assigned and individual bedroom   and may share a common room and bathroom with no more than 3 others.</p>
+                </div>
 
-            <p class="lead text-dark">What are the housing arrangements?</p>
-            <p class="text-dark">Everyone will be assigned and individual bedroom and may share a common room and bathroom with no more than 3 others.</p>
-
-            <p class="lead text-dark">What is the <a href="https://mitendicotthouse.org/" target="_blank">MIT Endicott Mansion?</a></p>
-            <p class="text-dark">Surrounded by 25 acres of magnificent gardens and grounds, the Endicott House is a mansion built in 1934 in the style of a French chateau.</p>
+                <div class="col-sm-6">
+                    <p class="lead text-dark">What is the <a href="https://mitendicotthouse.org/" target="_blank">MIT Endicott Mansion?</a></p>
+                    <p class="text-dark">Surrounded by 25 acres of magnificent gardens and grounds, the Endicott House is a mansion built in 1934 in the style of a French chateau.</p>
+                </div>
             </div>
         </div>
     </section>
     
+    <!-- <section id="photos" class="content content-2">
+        <div class="container">
+            <div class="row">
+                // Images used to open the lightbox
+                    <div class="row2">
+                        <div class="column2">
+                        <img src="images/img_5234.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                        </div>
+                        <div class="column2">
+                        <img src="images/img_5240.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                        </div>
+                        <div class="column2">
+                        <img src="images/img_5258.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                        </div>
+                        <div class="column2">
+                        <img src="images/img_5373.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                        </div>
+                    </div>
+                    
+                    // The Modal/Lightbox
+                    <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                    
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="img1_wide.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="img2_wide.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="img3_wide.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="img4_wide.jpg" style="width:100%">
+                        </div>
+                    
+                        // Next/previous controls
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                        // Caption text
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                    
+                        // Thumbnail image controls
+                        <div class="column">
+                            <img class="demo" src="images/img_5234.jpg" onclick="currentSlide(1)" alt="Nature">
+                        </div>
+                    
+                        <div class="column">
+                            <img class="demo" src="images/img_5240.jpg" onclick="currentSlide(2)" alt="Snow">
+                        </div>
+                    
+                        <div class="column">
+                            <img class="demo" src="images/img_5258.jpg" onclick="currentSlide(3)" alt="Mountains">
+                        </div>
+                    
+                        <div class="column">
+                            <img class="demo" src="images/img_5373.jpg" onclick="currentSlide(4)" alt="Lights">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section> -->
     
 	<!-- Footer -->
     <footer class="page-footer">
@@ -244,6 +325,9 @@ Although you can use them, for a more unique website, replace these images with 
     
     <!-- Custom Javascript -->
     <script src="js/custom.js"></script>
+
+    <!-- Lightbox -->
+    <script src="js/lightbox.js"></script>
 
     <!-- Countdown -->
     <!-- <script src="js/date.js"></script> -->
