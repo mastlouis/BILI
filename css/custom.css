@@ -17,7 +17,12 @@
 }
 
 #about-our-spring-retreat {
-    text-align: justify !important;
+    text-align: justify;
+}
+
+/* Overrides style above */
+#about-our-spring-retreat-title {
+    text-align: center;
 }
 
 /* Stuff I Added is above this comment */
